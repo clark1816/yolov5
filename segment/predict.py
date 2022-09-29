@@ -74,7 +74,7 @@ def run(
     exist_ok=False,  # existing project/name ok, do not increment
     line_thickness=3,  # bounding box thickness (pixels)
     hide_labels=False,  # hide labels
-    hide_conf=False,  # hide confidences
+    hide_conf=True,  # hide confidences
     half=False,  # use FP16 half-precision inference
     dnn=False,  # use OpenCV DNN for ONNX inference
     vid_stride=1,  # video frame-rate stride
