@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>File Upload Page</title>
+</head>
+<body>
+    	<center><h1>Here is the Image result</h1></center>
+    
+   	<img src="{{ file_name }}" alt="didnt work"usemap="#itemMap">
+   	<map name="itemMap">
+		{% for cords,x in rldisplay%}
+			<area shape="rect" coord="{{ cords }}" href="{{ x }}">
+    		{%endfor%}
+	</map>
+    	{% for x,y in link_list|zip(item_list)%}
+    	<p>{{ y }} <a href="{{ x }}">Link to product</a></p>
+    	{%endfor%}
+</body>
+</html>
+
